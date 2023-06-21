@@ -49,8 +49,7 @@ const ReservationPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(reservation);
-    // Hier können Sie Ihre Reservierungsanfrage an den Server senden und den Benutzer auf eine Bestätigungsseite weiterleiten.
-  };
+     };
 
   return (
     <div
