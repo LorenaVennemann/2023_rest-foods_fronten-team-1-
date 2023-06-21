@@ -49,7 +49,7 @@ const ReservationPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(reservation);
-     };
+  };
 
   return (
     <div
