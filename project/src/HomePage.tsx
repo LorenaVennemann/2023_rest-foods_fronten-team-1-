@@ -16,9 +16,7 @@ function HomePage() {
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
           </a>
-          <button type="button" className="btn btn-outline-dark">
-           <a href="/menu"><div className="navigation-text">Menu</div></a>
-          </button>
+           <div className="navigation-text">Menu</div>
         </div>
       </nav>
 
