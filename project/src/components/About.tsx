@@ -48,20 +48,20 @@ const AboutPage: React.FC = () => {
       </header>
       <section style={sectionStyle}>
         <h2 style={{ fontSize: '24px', marginBottom: '20px' }}>Willkommen in unserem Restaurant!</h2>
-        <p style={{color: 'orange'}}>
+        <p style={{color: 'white'}}>
           Bei uns dreht sich alles um gutes Essen und ein angenehmes Ambiente. Seit über 10 Jahren bieten wir unseren Gästen köstliche Speisen aus aller Welt.
         </p>
 
         <div style={containerStyle}>
           <h3 style={{ fontSize: '20px', marginBottom: '10px' }}>Unsere Philosophie</h3>
-          <p style={{color: 'orange'}}>
+          <p style={{color: 'white'}}>
             Wir glauben daran, dass Essen ein Erlebnis sein sollte. Daher verwenden wir nur hochwertige Zutaten und bereiten alle unsere Gerichte frisch zu. Unser engagiertes Küchenteam legt großen Wert auf Qualität und Geschmack.
           </p>
         </div>
 
         <div style={specialtiesStyle}>
           <h3 style={{ fontSize: '20px', marginBottom: '10px' }}>Unsere Spezialitäten</h3>
-          <ul style={{ listStyle: 'none', padding: 0, color: 'orange' }}>
+          <ul style={{ listStyle: 'none', padding: 0, color: 'white' }}>
             <li style={{ marginBottom: '5px' }}>React-Burger</li>
             <li style={{ marginBottom: '5px' }}>Chilli Cheeseburger</li>
             <li style={{ marginBottom: '5px' }}>BBG Burger</li>
@@ -72,7 +72,7 @@ const AboutPage: React.FC = () => {
 
         <div style={openingHoursStyle}>
           <h3 style={{ fontSize: '20px', marginBottom: '10px' }}>Öffnungszeiten</h3>
-          <p style={{color: 'orange'}}>
+          <p style={{color: 'white'}}>
             Wir haben täglich von 12:00 bis 22:00 Uhr geöffnet. Reservieren Sie einen Tisch und kommen Sie vorbei, um unsere leckeren Gerichte zu genießen!
           </p>
         </div>
