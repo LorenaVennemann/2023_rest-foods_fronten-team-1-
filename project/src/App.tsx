@@ -6,14 +6,15 @@ import MenuPage from "./MenuPage";
 
 function App() {
   return (
-    <><>
-    </><BrowserRouter>
+    <>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/menu" element={<MenuPage />} />
         </Routes>
-      </BrowserRouter></>
+      </BrowserRouter>
+    </>
   );
 }
 
