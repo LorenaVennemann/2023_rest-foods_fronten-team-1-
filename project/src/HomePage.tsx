@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoImage from './Logo1.jpg';
 import './HomePage.css';
 import { color } from '@mui/system';
-import Navbar from './components/Navbar';
 
 function HomePage() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   return (
     <>
-<<<<<<< HEAD
       <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -18,18 +22,43 @@ function HomePage() {
 
       <nav className="navbar fixed-top bg-body-tertiary smaller-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-          </a>
-           <div className="navigation-text">Menu</div>
+          <a className="navbar-brand" href="#"></a>
+          <div className="navigation-text" onClick={toggleNavbar}>
+            Menu
+          </div>
+          {navbarOpen && (
+            <ul className="navbar-nav flex-row ms-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/menu">
+                  Menukarte
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Über uns
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Kontakt
+                </a>
+              </li>
+            </ul>
+          )}
         </div>
       </nav>
-=======
-   <Navbar></Navbar>
->>>>>>> 189e2e5a48f806908c2f7329a279f47e6d13f6f0
-
       <div className="container">
-        <h1 className="title" style={{color: 'white'}}>Rest-Foods</h1>
-        <h3 className="subtitle" style={{color: 'white'}}>Wo jeder Bissen ein Erlebnis ist</h3>
+        <h1 className="title" style={{ color: 'white' }}>
+          Rest-Foods
+        </h1>
+        <h3 className="subtitle" style={{ color: 'white' }}>
+          Wo jeder Bissen ein Erlebnis ist
+        </h3>
         <Link to="/reservation" className="button">
           Tischreservierung
         </Link>
