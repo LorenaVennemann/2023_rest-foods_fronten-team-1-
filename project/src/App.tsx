@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import ReservationPage from "./components/Reservation";
 import HomePage from "./HomePage";
 import MenuPage from "./MenuPage";
-import AboutPage from "./components/About";
+import AboutPage from "./About";
 import KontaktPage from "./KontaktPage";
 
 function App() {
