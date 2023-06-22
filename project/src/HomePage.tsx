@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoImage from './Logo1.jpg';
 import './HomePage.css';
+import { color } from '@mui/system';
 
 function HomePage() {
   return (
@@ -18,14 +19,14 @@ function HomePage() {
           <a className="navbar-brand" href="#">
           </a>
           <button type="button" className="btn btn-outline-dark">
-            Dark
+            Menu
           </button>
         </div>
       </nav>
 
       <div className="container">
-        <h1 className="title">Rest-Foods</h1>
-        <h6 className="subtitle">Wo jeder Bissen ein Erlebnis ist</h6>
+        <h1 className="title" style={{color: 'white'}}>Rest-Foods</h1>
+        <h3 className="subtitle" style={{color: 'white'}}>Wo jeder Bissen ein Erlebnis ist</h3>
         <Link to="/reservation" className="button">
           Tischreservierung
         </Link>
