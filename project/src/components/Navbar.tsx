@@ -1,4 +1,12 @@
+import React, { useState } from 'react';
+
 const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   return (
     <>
       <link
@@ -11,9 +19,33 @@ const Navbar = () => {
       <nav className="navbar fixed-top bg-body-tertiary smaller-navbar">
         <div className="container-fluid">
           <a className="navbar-brand" href="#"></a>
-          <button type="button" className="btn btn-outline-dark">
+          <div className="navigation-text" onClick={toggleNavbar}>
             Menu
-          </button>
+          </div>
+          {navbarOpen && (
+            <ul className="navbar-nav flex-row ms-auto align-items-center">
+              <li className="nav-item">
+                <a className="nav-link mx-3" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-3" href="/menu">
+                  Menukarte
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-3" href="#">
+                  Über uns
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-3" href="#">
+                  Kontakt
+                </a>
+              </li>
+            </ul>
+          )}
         </div>
       </nav>
     </>
