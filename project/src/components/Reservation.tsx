@@ -1,5 +1,6 @@
 import { Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 interface Reservation {
   name: string;
@@ -129,6 +130,18 @@ const ReservationPage: React.FC = () => {
           >
             Reservieren
           </Button>
+
+          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Button
+          type="button"
+          variant="contained"
+          color="primary"
+          fullWidth
+          style={{ marginTop: "20px", backgroundColor: "#222" }}
+        >
+          Zurück
+          </Button>
+          </Link>
         </form>
       </div>
     </div>
