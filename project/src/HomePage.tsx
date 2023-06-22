@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import LogoImage from './Logo1.jpg';
 import './HomePage.css';
 
 function HomePage() {
@@ -11,11 +12,10 @@ function HomePage() {
         crossOrigin="anonymous"
       />
 
-      <nav className="navbar fixed-top bg-body-tertiary">
+<nav className="navbar fixed-top bg-body-tertiary smaller-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"></a>
-          <a href="index.html">
-            <img src="Logo.jpg" alt="Bootstrap" width="30" height="24" />
+          <a className="navbar-brand" href="#">
+          <img src={LogoImage} alt="Logo" className="logo" />
           </a>
           <button type="button" className="btn btn-outline-dark">
             Dark
@@ -23,16 +23,14 @@ function HomePage() {
         </div>
       </nav>
 
-      <header>
-        <div className="logo"></div>
-      </header>
-
-      <div className="container">
-        <h1 className="title">REST-Food</h1>
-        <Link to="/reservation" className="button">
-          Reservation
-        </Link>
-      </div>
+    
+        <div className="container">
+          <h1 className="title">REST-Food</h1>
+          <Link to="/reservation" className="button">
+            Reservation
+          </Link>
+        </div>
+     
     </>
   );
 }
