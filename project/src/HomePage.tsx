@@ -1,14 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import LogoImage from './Logo1.jpg';
 import './HomePage.css';
-import { color } from '@mui/system';
 import Navbar from './components/Navbar';
 
 function HomePage() {
   return (
     <>
-<<<<<<< HEAD
+
       <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -23,9 +20,8 @@ function HomePage() {
            <div className="navigation-text">Menu</div>
         </div>
       </nav>
-=======
+
    <Navbar></Navbar>
->>>>>>> 189e2e5a48f806908c2f7329a279f47e6d13f6f0
 
       <div className="container">
         <h1 className="title" style={{color: 'white'}}>Rest-Foods</h1>
