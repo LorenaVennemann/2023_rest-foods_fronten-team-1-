@@ -35,7 +35,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link mx-3" href="#">
+                <a className="nav-link mx-3" href="/about">
                   Über uns
                 </a>
               </li>

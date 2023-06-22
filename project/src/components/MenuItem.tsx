@@ -9,7 +9,7 @@ import Navbar from './Navbar';
 export default function MenuItem() {
   return (
     <>
-     
+      <Navbar />
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
