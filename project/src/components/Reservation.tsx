@@ -74,7 +74,7 @@ const ReservationPage: React.FC = () => {
         }}
       >
         <Typography variant="h4" style={{ textAlign: "center", marginBottom: "40px", color: "#222" }}>
-          Reservierung
+         Tischreservierung
         </Typography>
         <form onSubmit={handleSubmit}>
           <TextField

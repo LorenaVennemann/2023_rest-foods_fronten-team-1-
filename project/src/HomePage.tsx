@@ -1,8 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoImage from './Logo1.jpg';
 import './HomePage.css';
-import "./HomePage.css";
-
 
 function HomePage() {
   return (
@@ -14,10 +13,9 @@ function HomePage() {
         crossOrigin="anonymous"
       />
 
-<nav className="navbar fixed-top bg-body-tertiary smaller-navbar">
+      <nav className="navbar fixed-top bg-body-tertiary smaller-navbar">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-          <img src={LogoImage} alt="Logo" className="logo" />
           </a>
           <button type="button" className="btn btn-outline-dark">
             Dark
@@ -25,12 +23,11 @@ function HomePage() {
         </div>
       </nav>
 
-    
-
       <div className="container">
-        <h1 className="title">REST-Food</h1>
+        <h1 className="title">Rest-Foods</h1>
+        <h6 className="subtitle">Wo jeder Bissen ein Erlebnis ist</h6>
         <Link to="/reservation" className="button">
-          Reservation
+          Tischreservierung
         </Link>
       </div>
     </>
