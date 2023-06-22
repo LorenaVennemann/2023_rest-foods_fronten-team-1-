@@ -1,0 +1,17 @@
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-label {
+  font-weight: bold;
+}
+
+.Kontakt {
+  margin-top: 12%;
+  padding: 72px;
+  background-color: hsla(0, 0%, 72%, 0.9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 57%;
+}
