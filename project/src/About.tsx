@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import "./About.css";
 
 const AboutPage: React.FC = () => {
   const containerStyle: React.CSSProperties = {
@@ -42,7 +44,9 @@ const AboutPage: React.FC = () => {
   };
 
   return (
-    <div style={containerStyle}>
+    <>
+    <Navbar></Navbar>
+    <div style={containerStyle} className='about'>
       <header style={headerStyle}>
         <h1 style={{ fontSize: '28px', margin: 0, color: 'black' }}>WE ARE HOMEMADE</h1>
       </header>
@@ -82,6 +86,7 @@ const AboutPage: React.FC = () => {
         <p style={{ fontSize: '14px', margin: 0, color: 'black' }}>&copy; 2023 Seit 10 Jahren Frische Zubereitung</p>
       </footer>
     </div>
+    </>
   );
 };
 
