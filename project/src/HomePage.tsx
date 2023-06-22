@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
+import Navbar from "./components/Navbar";
 
 function HomePage() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -18,38 +19,7 @@ function HomePage() {
         crossOrigin="anonymous"
       />
 
-      <nav className="navbar fixed-top bg-body-tertiary smaller-navbar">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#"></a>
-          <div className="navigation-text" onClick={toggleNavbar}>
-            Menu
-          </div>
-          {navbarOpen && (
-            <ul className="navbar-nav flex-row ms-auto align-items-center">
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="/">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="/menu">
-                  Menukarte
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="/about">
-                  Über uns
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="#">
-                  Kontakt
-                </a>
-              </li>
-            </ul>
-          )}
-        </div>
-      </nav>
+      <Navbar></Navbar>
       <div className="container">
         <h1 className="title" style={{ color: "white" }}>
           Rest-Foods
