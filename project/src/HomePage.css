@@ -56,3 +56,20 @@ body {
   border-radius: 2px;
   margin-top: 20px;
 }
+.navigation-text {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: .65vw;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  font-family: "Work sans v18 latin 600", sans-serif;
+  color: black;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1vh 1.5vw;
+  overflow: hidden;
+}
+
