@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 function MenuPage() {
   return (
     <>
+    <div className="menu">
       <Navbar></Navbar>
       <ResponsiveGrid>
         <MenuItem></MenuItem>
@@ -18,6 +19,7 @@ function MenuPage() {
         <MenuItem></MenuItem>
         <MenuItem></MenuItem>
       </ResponsiveGrid>
+      </div>
     </>
   );
 }

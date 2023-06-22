@@ -1,7 +1,7 @@
-body {
+.menu {
     margin: 0;
     padding: 72px;
-    background-color: white;
+    background-color: rgb(184, 184, 184);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

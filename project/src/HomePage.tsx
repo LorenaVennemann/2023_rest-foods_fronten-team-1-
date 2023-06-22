@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './HomePage.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 function HomePage() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -51,10 +51,10 @@ function HomePage() {
         </div>
       </nav>
       <div className="container">
-        <h1 className="title" style={{ color: 'white' }}>
+        <h1 className="title" style={{ color: "white" }}>
           Rest-Foods
         </h1>
-        <h3 className="subtitle" style={{ color: 'white' }}>
+        <h3 className="subtitle" style={{ color: "white" }}>
           Wo jeder Bissen ein Erlebnis ist
         </h3>
         <Link to="/reservation" className="button">
