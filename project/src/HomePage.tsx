@@ -29,18 +29,18 @@ function HomePage() {
           {navbarOpen && (
             <ul className="navbar-nav flex-row ms-auto align-items-center">
               <li className="nav-item">
-                <a className="nav-link mx-3" href="#">
+                <a className="nav-link mx-3" href="/">
                   Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-3" href="/menu">
+                  Menukarte
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link mx-3" href="#">
                   Über uns
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="#">
-                  Dashboard
                 </a>
               </li>
               <li className="nav-item">
