@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import LogoImage from './Logo1.jpg';
 import './HomePage.css';
-import { color } from '@mui/system';
 
 function HomePage() {
   const [navbarOpen, setNavbarOpen] = useState(false);
