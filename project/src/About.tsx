@@ -47,10 +47,9 @@ const AboutPage: React.FC = () => {
     <>
     <Navbar></Navbar>
     <div style={containerStyle} className='about'>
-      <header style={headerStyle}>
+    <section style={sectionStyle}>
         <h1 style={{ fontSize: '28px', margin: 0, color: 'black' }}>WE ARE HOMEMADE</h1>
-      </header>
-      <section style={sectionStyle}>
+      
         <h2 style={{ fontSize: '24px', marginBottom: '20px' }}>Willkommen in unserem Restaurant!</h2>
         <p style={{color: 'white'}}>
           Bei uns dreht sich alles um gutes Essen und ein angenehmes Ambiente. Seit über 10 Jahren bieten wir unseren Gästen köstliche Speisen aus aller Welt.

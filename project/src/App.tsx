@@ -3,13 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 import ReservationPage from "./components/Reservation";
 import HomePage from "./HomePage";
 import MenuPage from "./MenuPage";
-<<<<<<< HEAD
-import AboutPage from "./components/About";
-
-=======
-import AboutPage from "./About";
->>>>>>> 9aff64035081cbd27b82dac43be9c22e32780fff
 import KontaktPage from "./KontaktPage";
+import AboutPage from "./About";
 
 function App() {
   return (
