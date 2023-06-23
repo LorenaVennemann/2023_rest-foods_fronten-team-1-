@@ -44,6 +44,11 @@ const Navbar = () => {
                   Kontakt
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link mx-3" href="/login">
+                  Login
+                </a>
+              </li>
             </ul>
           )}
         </div>
