@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 import MenuPage from "./MenuPage";
 import KontaktPage from "./KontaktPage";
 import AboutPage from "./About";
+import LoginPage from "./Login";
 
 function App() {
   return (
