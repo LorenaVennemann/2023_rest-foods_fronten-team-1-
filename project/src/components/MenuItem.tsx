@@ -5,8 +5,26 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Navbar from './Navbar';
+import { useParams } from 'react-router-dom';
+import PublisherService from './service/ItemService';
+import { useState } from 'react';
+
+type MenuItem = {
+  id: number;
+  name: String;
+  description: String;
+  price: number;
+};
 
 export default function MenuItem() {
+  React.useEffect(() => {
+    PublisherService()
+      .getAllDataFromDB()
+      .then((response) => {
+        setResponseData(response);
+      });
+  }, []);
+  
   return (
     <>
       <Navbar />
@@ -20,14 +38,16 @@ export default function MenuItem() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Burger
+              {MenuItem.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Beschreibung, Zutaten, Preis
+          {MenuItem.description}
+          {MenuItem.price}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
     </>
   );
-}
+  }
+
