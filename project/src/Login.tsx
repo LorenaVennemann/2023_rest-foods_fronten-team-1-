@@ -55,7 +55,7 @@ const UserLogin = () => {
               )}
             </Field>
             <Button
-              variant="contained"
+              variant="outlined"
               color="primary"
               type="submit"
               disabled={isSubmitting}

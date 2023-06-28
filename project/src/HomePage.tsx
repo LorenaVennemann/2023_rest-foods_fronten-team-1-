@@ -1,14 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import Navbar from "./components/Navbar";
+import { defaultAxiosInstance } from "./components/service/Api";
 
-function HomePage() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+interface MenuItem {
+  id: number;
+  name: string;
+  description: string;
+}
 
-  const toggleNavbar = () => {
+function HomePage(): JSX.Element {
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+
+  const toggleNavbar = (): void => {
     setNavbarOpen(!navbarOpen);
   };
+
+  useEffect(() => {
+    defaultAxiosInstance
+      .get<MenuItem[]>("/menu")
+      .then((response) => {
+        setMenuItems(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <>
@@ -51,7 +70,7 @@ function HomePage() {
           )}
         </div>
       </nav>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="container">
         <h1 className="title" style={{ color: "white" }}>
           Rest-Foods
@@ -62,6 +81,14 @@ function HomePage() {
         <Link to="/reservation" className="button">
           Tischreservierung
         </Link>
+        <div>
+          {menuItems.map((item: MenuItem) => (
+            <div key={item.id}>
+              <h4>{item.name}</h4>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
