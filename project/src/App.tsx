@@ -4,8 +4,9 @@ import ReservationPage from "./components/Reservation";
 import HomePage from "./HomePage";
 import KontaktPage from "./KontaktPage";
 import AboutPage from "./About";
-import LoginPage from "./Login";
+
 import MenuItem from "./components/MenuItem";
+import LoginPage from "./Login";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/menu" element={<MenuItem />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/kontakt" element={<KontaktPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage history={[]}/>} />
         </Routes>
       </BrowserRouter>
     </>
