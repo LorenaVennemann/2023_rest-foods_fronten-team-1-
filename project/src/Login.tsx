@@ -1,39 +1,52 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Button, TextField } from '@mui/material';
 import { Formik, Form, Field } from 'formik';
-import login from './components/service/LoginService';
+import LoginService from './components/service/LoginService';
+import { Navigate } from 'react-router-dom'; // assuming you're using React Router
 
-
-const UserLogin = () => {
-  const navigate = useNavigate();
-
-  const handleLogin = async (values: { email: string; password: string }) => {
+const Login = () => {
+  const handleLogin = async (values) => {
     const { email, password } = values;
     if (email && password) {
       console.log(`Email: ${email}, Password: ${password}`);
-      const accessToken = await login().loginUser(email, password);
-      console.log(`Access Token: ${accessToken}`);
-      localStorage.setItem('accessToken', accessToken);
-      navigate('/employee', { replace: true });
+      try {
+        const accessToken = await LoginService.loginUser(email, password);
+        console.log(`Access Token: ${accessToken}`);
+        localStorage.setItem('accessToken', accessToken);
+        navigate('/employee', { replace: true });
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
   const handleBack = () => {
-    navigate('/'); 
+    navigate('/');
   };
 
   return (
     <div>
-      <h1 style={{ color: 'white' }}>Welcome</h1>
+      <h1>Any place in your app!</h1>
       <Formik
-        initialValues={{ email: '', password: '' }}
-        onSubmit={handleLogin}
+        initialValues={{ email: 'elmar@mail.com', password: '12345' }}
+        validate={(values) => {
+          const errors = {};
+          if (!values.email) {
+            errors.email = 'Required';
+          } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+            errors.email = 'Invalid email address';
+          }
+          console.log(errors);
+          return errors;
+        }}
+        onSubmit={(values, { setSubmitting }) => {
+          handleLogin(values);
+          setSubmitting(false);
+        }}
       >
         {({ isSubmitting }) => (
           <Form>
             <Field name="email">
-              {({ field }: { field: any }) => (
+              {({ field }) => (
                 <TextField
                   label="Email"
                   type="email"
@@ -44,7 +57,7 @@ const UserLogin = () => {
               )}
             </Field>
             <Field name="password">
-              {({ field }: { field: any }) => (
+              {({ field}) => (
                 <TextField
                   label="Password"
                   type="password"
@@ -78,4 +91,4 @@ const UserLogin = () => {
   );
 };
 
-export default UserLogin;
+export default Login;

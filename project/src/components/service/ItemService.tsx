@@ -1,20 +1,15 @@
-import { defaultAxiosInstance } from "./Api";
+import api from "./Api";
 
-
-
-const PublisherService = () => ({
-
-
+const ItemService = () => ({
     getDataFromDB: async (id: number) => {
-      const data = await defaultAxiosInstance.get(`MenuItem/${id}`);
+      const data = await api.get(`menu/${id}`);
       return data.data;
     },
-
+  
     getAllDataFromDB: async () => {
-      const response = await defaultAxiosInstance.get("MenuItem");
+      const response = await api.get("menu");
       return response.data;
     },
-  
   });
 
-  export default PublisherService;
+  export default ItemService;

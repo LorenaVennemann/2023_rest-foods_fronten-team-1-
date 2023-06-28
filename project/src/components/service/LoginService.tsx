@@ -1,17 +1,14 @@
-import { AxiosInstance } from "axios";
-import { defaultAxiosInstance } from "./Api";
+import api from "./Api";
 
+const AuthService = () => ({
+  login: async (data: any) => {
+    const response = await api.post("login", data);
+    const jwt = response.data.accessToken; 
 
-const login = (api: AxiosInstance = defaultAxiosInstance) => ({
-  loginUser: async (email: string, password: string) => {
-    const input = {
-      email: email,
-      password: password,
-    };
-    const data = await api.post("login", input);
-    console.log("login done")
-    return data["data"]["accessToken"];
+    localStorage.setItem("jwt", jwt); // Save the JWT in localStorage
+
+    return response.data;
   },
 });
 
-export default login;
+export default AuthService;
