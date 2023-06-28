@@ -114,7 +114,6 @@ const UserLogin = () => {
             </Field>
 
             <Button
-<<<<<<< HEAD
               variant="outlined"
               color="primary"
               type="submit"
@@ -124,9 +123,7 @@ const UserLogin = () => {
             </Button>
             <br />
             <Button
-=======
 
->>>>>>> e82fdcc4602ff33ba61a47b3135c26e092703d2a
               variant="outlined"
 
               color="primary"
